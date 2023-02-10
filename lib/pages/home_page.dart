@@ -23,7 +23,7 @@ class HomePage extends GetView<AssistsController>{
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AppBar(title: const Text("Teste")),
+      appBar: AppBar(title: const Text("ABC Tech")),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: SingleChildScrollView(child: Column(mainAxisAlignment: MainAxisAlignment.center,
