@@ -1,4 +1,5 @@
-import 'package:geolocator/geolocator.dart';
+import 'package:geolocator/geolocator.dart' show Geolocator, LocationPermission, Position;
+
 
 abstract class GeolocatorServiceInterface{
   Future<bool> _enableService();

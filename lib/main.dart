@@ -1,11 +1,12 @@
 import 'package:abc_tech_app/pages/home_bind.dart';
+import 'package:abc_tech_app/pages/home_page.dart';
+import 'package:abc_tech_app/pages/order_bind.dart';
+import 'package:abc_tech_app/pages/order_page.dart';
 import 'package:abc_tech_app/provider/assist_provider.dart';
 import 'package:abc_tech_app/service/assist_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
-
-import 'pages/home_page.dart';
 
 void main() {
   initService();
@@ -38,7 +39,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
       ),
       getPages: [
-        GetPage(name: "/", page: () => const HomePage(), binding: HomeBind())
+        GetPage(name: "/", page: () =>  const OrderPage(), binding: OrderBind()),
+        GetPage(name: "/assists", page: () => const HomePage(), binding: HomeBind())
       ],     
     );
   }
