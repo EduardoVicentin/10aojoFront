@@ -25,6 +25,13 @@ class OrderController extends GetxController with StateMixin{
     _geolocationService.start();
   }
 
+
+  @override
+  void onReady(){
+    super.onReady();
+    change(null, status: RxStatus.success());
+  }
+
   getLocation () {
     _geolocationService.getPosition().then((value) => log(value.toJson().toString()));
   }
@@ -68,11 +75,18 @@ class OrderController extends GetxController with StateMixin{
       if(value){
         Get.snackbar("Sucesso", "Ordem de serviço enviada com sucesso!");
       }
-      change(null, status: RxStatus.success());
+      _clearForm();
     }).catchError((error){
        Get.snackbar("ERRO!", error.toString());
-       change(null, status: RxStatus.success());
+       _clearForm();
     });
+  }
+
+  void _clearForm(){
+    screenState.value = OrderState.creating;
+    selectedAssists.clear();
+    operatorIDController.text = "";
+    change(null, status: RxStatus.success());
   }
 
   selectAssists(){
