@@ -49,7 +49,7 @@ class OrderController extends GetxController with StateMixin{
               longitude: value.longitude, 
               datetime: DateTime.now());
           _order = Order(
-            operatorId: int.parse(operatorIDController.text),
+            operatorId: orderOperatorIDValidation(operatorIDController.text),
             assists: _assistToList(),
             start: start,
             end: null);
@@ -92,5 +92,22 @@ class OrderController extends GetxController with StateMixin{
   selectAssists(){
     Get.toNamed("/assists", arguments: selectedAssists);
   }  
+
+  int orderOperatorIDValidation (String operatorID){
+    int operatorIDValidated = 0;
+    try{
+      if(int.tryParse(operatorID) != null){
+        operatorIDValidated = int.parse(operatorID);        
+      }
+      else {
+        throw Exception("O valor inserido para o ID do usuário não é um número, ou valor válido!");
+      }
+    }
+    catch(error){
+      Get.snackbar("ERRO!", error.toString());
+       _clearForm();
+    }     
+    return operatorIDValidated; 
+  }
 
 }
