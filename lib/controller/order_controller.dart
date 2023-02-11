@@ -37,7 +37,13 @@ class OrderController extends GetxController with StateMixin{
   }
 
   List<int> _assistToList(){
-    return selectedAssists.map((element) => element.id).toList();
+    List<int> selectedAssistsValidation = selectedAssists.map((element) => element.id).toList();
+    if(selectedAssistsValidation.isEmpty || selectedAssistsValidation.length >15)
+    {
+        Get.snackbar("Erro", "O número de assistências deve estar entre 1 e 15!");
+        _clearForm();
+    }
+    return selectedAssistsValidation;
   }
 
   finishStartOrder(){
