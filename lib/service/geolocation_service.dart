@@ -9,6 +9,7 @@ abstract class GeolocatorServiceInterface{
   Future<bool> start();
 }
 
+
 class GeolocatorService implements GeolocatorServiceInterface {
 
   bool _serviceEnabled = false;

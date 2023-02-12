@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:abc_tech_app/model/assist.dart';
 import 'package:abc_tech_app/model/order.dart';
 import 'package:abc_tech_app/model/order_location.dart';
-import 'package:abc_tech_app/service/geolocation.service.dart';
+import 'package:abc_tech_app/service/geolocation_service.dart';
 import 'package:abc_tech_app/service/order_service.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
