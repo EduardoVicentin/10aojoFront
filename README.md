@@ -1,16 +1,10 @@
-# abc_tech_app
+## SOLUTION SPRINT - SOLUTION SPRINT – ENGENHARIA DE SOFTWARE
 
-A new Flutter project.
+### Projeto MBA 10AOJO - ABCTECH
 
-## Getting Started
+#### Arquitetura:
+![image](https://user-images.githubusercontent.com/25628007/218286513-ee442aa4-03fc-4ba0-802e-037b5d70a3b6.png)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Integrantes: 
+Vinícius de Andrade Barros<br>
+Eduardo Vicentin
